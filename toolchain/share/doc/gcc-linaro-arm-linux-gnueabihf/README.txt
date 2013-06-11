@@ -1,4 +1,4 @@
-Linaro Toolchain 2012.11
+Linaro Toolchain 2013.05
 ========================
 
 This package contains pre-built versions of Linaro GCC and Linaro GDB
@@ -19,8 +19,8 @@ easier.
 
 What's included
 ---------------
- * Linaro GCC 4.7 2012.11
- * Linaro GDB 7.5 2012.09
+ * Linaro GCC 4.8 2013.05
+ * Linaro GDB 7.6 2013.05
  * A statically linked gdbserver in arm-linux-gnueabihf/debug-root
  * A system root
  * Manuals under share/doc/
@@ -42,9 +42,9 @@ https://wiki.linaro.org/GettingInvolved.
 Target compatibility
 --------------------
 The arm-linux-gnueabihf version targets the Linaro Evaluation Build
-12.05 flavour of Ubuntu 12.04 "Precise Pangolin".  The default
-configuration is:
+12.05 flavour of Ubuntu 12.04 "Precise Pangolin".
 
+The default configuration is:
  * Runs on all Cortex-A profile devices
  * Tuned for the Cortex-A9
  * Thumb-2
@@ -73,10 +73,13 @@ to GCC:
 
  -marm -march=armv4t -mfloat-abi=soft
 
+If ARMv4T does not work, please try to add "-mno-unaligned-access" to disable
+unaligned access.
+
 Host compatibility
 ------------------
 The Linux version is supported on:
- * Ubuntu 10.04.3 and 11.10
+ * Ubuntu 10.04.3 and later
  * Debian 6.0.2
  * Fedora 16
  * openSUSE 12.1
@@ -122,7 +125,7 @@ To reproduce this build:
  * Download and extract the crosstool-NG tarball
  * Change to the crosstool-NG directory
  * Extract the `src` archive giving `tarballs/binutils-*` and similar
- * Run `make -f contrib/linaro/build.mk`
+ * Run `make -f contrib/linaro/build.mk TARGETS=arm-linux-gnueabihf`
 
 The builds will end up in `builds/$target-$host`.  See
 `contrib/linaro/build.mk` for more.
@@ -144,3 +147,4 @@ Unsupported builds:
 
 The Linaro version of crosstool-NG:
  https://code.launchpad.net/~linaro-toolchain-dev/crosstool-ng/linaro
+

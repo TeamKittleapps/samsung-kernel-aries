@@ -10,10 +10,7 @@
 <link rel="next" href="Thread-Stops.html#Thread-Stops" title="Thread Stops">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
-Copyright (C) 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996,
-1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010
-2011, 2012
-Free Software Foundation, Inc.
+Copyright (C) 1988-2013 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -87,6 +84,9 @@ the defined types of signals.
      <br><dt><code>info signals </code><var>sig</var><dd>Similar, but print information only about the specified signal number.
 
      <p><code>info handle</code> is an alias for <code>info signals</code>.
+
+     <br><dt><code>catch signal </code><span class="roman">[</span><var>signal</var><code>... </code><span class="roman">|</span><code> &lsquo;</code><samp><span class="samp">all</span></samp><code>&rsquo;</code><span class="roman">]</span><dd>Set a catchpoint for the indicated signals.  See <a href="Set-Catchpoints.html#Set-Catchpoints">Set Catchpoints</a>,
+for details about this command.
 
      <p><a name="index-handle-338"></a><br><dt><code>handle </code><var>signal</var> <span class="roman">[</span><var>keywords</var><code>...</code><span class="roman">]</span><dd>Change the way <span class="sc">gdb</span> handles signal <var>signal</var>.  <var>signal</var>
 can be the number of a signal or its name (with or without the

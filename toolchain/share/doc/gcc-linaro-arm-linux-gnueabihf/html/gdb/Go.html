@@ -10,10 +10,7 @@
 <link rel="next" href="Objective_002dC.html#Objective_002dC" title="Objective-C">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
-Copyright (C) 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996,
-1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010
-2011, 2012
-Free Software Foundation, Inc.
+Copyright (C) 1988-2013 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -50,13 +47,13 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Supported-Languages.html#Supported-Lang
 
 <h4 class="subsection">15.4.3 Go</h4>
 
-<p><a name="index-Go-_0028programming-language_0029-884"></a><span class="sc">gdb</span> can be used to debug programs written in Go and compiled with
+<p><a name="index-Go-_0028programming-language_0029-897"></a><span class="sc">gdb</span> can be used to debug programs written in Go and compiled with
 <samp><span class="file">gccgo</span></samp> or <samp><span class="file">6g</span></samp> compilers.
 
    <p>Here is a summary of the Go-specific features and restrictions:
 
      
-<a name="index-current-Go-package-885"></a>
+<a name="index-current-Go-package-898"></a>
 <dl><dt><code>The current Go package</code><dd>The name of the current package does not need to be specified when
 specifying global variables and functions.
 
@@ -73,13 +70,13 @@ specifying global variables and functions.
      <pre class="example">          (gdb) p myglob
           (gdb) p main.myglob
 </pre>
-     <p><a name="index-builtin-Go-types-886"></a><br><dt><code>Builtin Go types</code><dd>The <code>string</code> type is recognized by <span class="sc">gdb</span> and is printed
+     <p><a name="index-builtin-Go-types-899"></a><br><dt><code>Builtin Go types</code><dd>The <code>string</code> type is recognized by <span class="sc">gdb</span> and is printed
 as a string.
 
-     <p><a name="index-builtin-Go-functions-887"></a><br><dt><code>Builtin Go functions</code><dd>The <span class="sc">gdb</span> expression parser recognizes the <code>unsafe.Sizeof</code>
+     <p><a name="index-builtin-Go-functions-900"></a><br><dt><code>Builtin Go functions</code><dd>The <span class="sc">gdb</span> expression parser recognizes the <code>unsafe.Sizeof</code>
 function and handles it internally.
 
-     <p><a name="index-restrictions-on-Go-expressions-888"></a><br><dt><code>Restrictions on Go expressions</code><dd>All Go operators are supported except <code>&amp;^</code>. 
+     <p><a name="index-restrictions-on-Go-expressions-901"></a><br><dt><code>Restrictions on Go expressions</code><dd>All Go operators are supported except <code>&amp;^</code>. 
 The Go <code>_</code> &ldquo;blank identifier&rdquo; is not supported. 
 Automatic dereferencing of pointers is not supported. 
 </dl>

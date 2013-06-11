@@ -9,10 +9,7 @@
 <link rel="next" href="dotdebug_005fgdb_005fscripts-section.html#dotdebug_005fgdb_005fscripts-section" title="dotdebug_gdb_scripts section">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
-Copyright (C) 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996,
-1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010
-2011, 2012
-Free Software Foundation, Inc.
+Copyright (C) 1988-2013 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -49,7 +46,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Python-Auto_002dloading.html#Python-Aut
 
 <h5 class="subsubsection">23.2.3.1 The <samp><var>objfile</var><span class="file">-gdb.py</span></samp> file</h5>
 
-<p><a name="index-g_t_0040file_007b_0040var_007bobjfile_007d_002dgdb_002epy_007d-2126"></a>
+<p><a name="index-g_t_0040file_007b_0040var_007bobjfile_007d_002dgdb_002epy_007d-2171"></a>
 When a new object file is read, <span class="sc">gdb</span> looks for
 a file named <samp><var>objfile</var><span class="file">-gdb.py</span></samp> (we call it <var>script-name</var> below),
 where <var>objfile</var> is the object file's real name, formed by ensuring
@@ -63,8 +60,15 @@ readable, <span class="sc">gdb</span> will evaluate it as a Python script.
    <p>Note that loading of this script file also requires accordingly configured
 <code>auto-load safe-path</code> (see <a href="Auto_002dloading-safe-path.html#Auto_002dloading-safe-path">Auto-loading safe path</a>).
 
+   <p>For object files using <samp><span class="file">.exe</span></samp> suffix <span class="sc">gdb</span> tries to load first the
+scripts normally according to its <samp><span class="file">.exe</span></samp> filename.  But if no scripts are
+found <span class="sc">gdb</span> also tries script filenames matching the object file without
+its <samp><span class="file">.exe</span></samp> suffix.  This <samp><span class="file">.exe</span></samp> stripping is case insensitive and it
+is attempted on any platform.  This makes the script filenames compatible
+between Unix and MS-Windows hosts.
+
      <dl>
-<a name="set-auto_002dload-scripts_002ddirectory"></a><a name="index-set-auto_002dload-scripts_002ddirectory-2127"></a><dt><code>set auto-load scripts-directory </code><span class="roman">[</span><var>directories</var><span class="roman">]</span><dd>Control <span class="sc">gdb</span> auto-loaded scripts location.  Multiple directory entries
+<a name="set-auto_002dload-scripts_002ddirectory"></a><a name="index-set-auto_002dload-scripts_002ddirectory-2172"></a><dt><code>set auto-load scripts-directory </code><span class="roman">[</span><var>directories</var><span class="roman">]</span><dd>Control <span class="sc">gdb</span> auto-loaded scripts location.  Multiple directory entries
 may be delimited by the host platform path separator in use
 (&lsquo;<samp><span class="samp">:</span></samp>&rsquo; on Unix, &lsquo;<samp><span class="samp">;</span></samp>&rsquo; on MS-Windows and MS-DOS).
 
@@ -87,7 +91,7 @@ platform.
 systems, &lsquo;<samp><span class="samp">;</span></samp>&rsquo; on MS-Windows and MS-DOS) to separate directories, similarly
 to the <samp><span class="env">PATH</span></samp> environment variable.
 
-     <p><a name="show-auto_002dload-scripts_002ddirectory"></a><a name="index-show-auto_002dload-scripts_002ddirectory-2128"></a><br><dt><code>show auto-load scripts-directory</code><dd>Show <span class="sc">gdb</span> auto-loaded scripts location. 
+     <p><a name="show-auto_002dload-scripts_002ddirectory"></a><a name="index-show-auto_002dload-scripts_002ddirectory-2173"></a><br><dt><code>show auto-load scripts-directory</code><dd>Show <span class="sc">gdb</span> auto-loaded scripts location. 
 </dl>
 
    <p><span class="sc">gdb</span> does not track which files it has already auto-loaded this way. 

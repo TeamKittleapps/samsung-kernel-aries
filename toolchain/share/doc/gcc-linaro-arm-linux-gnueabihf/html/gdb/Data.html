@@ -9,10 +9,7 @@
 <link rel="next" href="Optimized-Code.html#Optimized-Code" title="Optimized Code">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
-Copyright (C) 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996,
-1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010
-2011, 2012
-Free Software Foundation, Inc.
+Copyright (C) 1988-2013 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -49,10 +46,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
 
 <h2 class="chapter">10 Examining Data</h2>
 
-<p><a name="index-printing-data-514"></a><a name="index-examining-data-515"></a><a name="index-print-516"></a><a name="index-inspect-517"></a><!-- "inspect" is not quite a synonym if you are using Epoch, which we do not -->
-<!-- document because it is nonstandard...  Under Epoch it displays in a -->
-<!-- different window or something like that. -->
-The usual way to examine data in your program is with the <code>print</code>
+<p><a name="index-printing-data-524"></a><a name="index-examining-data-525"></a><a name="index-print-526"></a><a name="index-inspect-527"></a>The usual way to examine data in your program is with the <code>print</code>
 command (abbreviated <code>p</code>), or its synonym <code>inspect</code>.  It
 evaluates and prints the value of an expression of the language your
 program is written in (see <a href="Languages.html#Languages">Using <span class="sc">gdb</span> with Different Languages</a>).  It may also print the expression using a
@@ -64,7 +58,7 @@ value of <var>expr</var> is printed in a format appropriate to its data type;
 you can choose a different format by specifying &lsquo;<samp><span class="samp">/</span><var>f</var></samp>&rsquo;, where
 <var>f</var> is a letter specifying the format; see <a href="Output-Formats.html#Output-Formats">Output Formats</a>.
 
-     <br><dt><code>print</code><dt><code>print /</code><var>f</var><dd><a name="index-reprint-the-last-value-518"></a>If you omit <var>expr</var>, <span class="sc">gdb</span> displays the last value again (from the
+     <br><dt><code>print</code><dt><code>print /</code><var>f</var><dd><a name="index-reprint-the-last-value-528"></a>If you omit <var>expr</var>, <span class="sc">gdb</span> displays the last value again (from the
 <dfn>value history</dfn>; see <a href="Value-History.html#Value-History">Value History</a>).  This allows you to
 conveniently inspect the same value in an alternative format. 
 </dl>
@@ -77,7 +71,7 @@ specified format.  See <a href="Memory.html#Memory">Examining Memory</a>.
 fields of a struct or a class are declared, use the <code>ptype </code><var>exp</var>
 command rather than <code>print</code>.  See <a href="Symbols.html#Symbols">Examining the Symbol Table</a>.
 
-   <p><a name="index-exploring-hierarchical-data-structures-519"></a><a name="index-explore-520"></a>Another way of examining values of expressions and type information is
+   <p><a name="index-exploring-hierarchical-data-structures-529"></a><a name="index-explore-530"></a>Another way of examining values of expressions and type information is
 through the Python extension command <code>explore</code> (available only if
 the <span class="sc">gdb</span> build is configured with <code>--with-python</code>).  It
 offers an interactive way to start at the highest level (or, the most
@@ -183,13 +177,13 @@ being invoked, while the latter is a way to explicitly specify that type
 exploration of the argument is being invoked.
 
      <dl>
-<dt><code>explore value </code><var>expr</var><dd><a name="index-explore-value-521"></a>This sub-command of <code>explore</code> explores the value of the
+<dt><code>explore value </code><var>expr</var><dd><a name="index-explore-value-531"></a>This sub-command of <code>explore</code> explores the value of the
 expression <var>expr</var> (if <var>expr</var> is an expression valid in the
 current context of the program being debugged).  The behavior of this
 command is identical to that of the behavior of the <code>explore</code>
 command being passed the argument <var>expr</var>.
 
-     <br><dt><code>explore type </code><var>arg</var><dd><a name="index-explore-type-522"></a>This sub-command of <code>explore</code> explores the type of <var>arg</var> (if
+     <br><dt><code>explore type </code><var>arg</var><dd><a name="index-explore-type-532"></a>This sub-command of <code>explore</code> explores the type of <var>arg</var> (if
 <var>arg</var> is a type visible in the current context of program being
 debugged), or the type of the value/expression <var>arg</var> (if <var>arg</var>
 is an expression valid in the current context of the program being
@@ -212,6 +206,7 @@ being passed the type of <var>arg</var> as the argument.
 <li><a accesskey="9" href="Pretty-Printing.html#Pretty-Printing">Pretty Printing</a>:              Python pretty printing
 <li><a href="Value-History.html#Value-History">Value History</a>:                Value history
 <li><a href="Convenience-Vars.html#Convenience-Vars">Convenience Vars</a>:             Convenience variables
+<li><a href="Convenience-Funs.html#Convenience-Funs">Convenience Funs</a>:             Convenience functions
 <li><a href="Registers.html#Registers">Registers</a>:                    Registers
 <li><a href="Floating-Point-Hardware.html#Floating-Point-Hardware">Floating Point Hardware</a>:      Floating point hardware
 <li><a href="Vector-Unit.html#Vector-Unit">Vector Unit</a>:                  Vector Unit
