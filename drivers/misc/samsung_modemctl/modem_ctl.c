@@ -727,22 +727,28 @@ static int modem_start(struct modemctl *mc, int ramdump)
 
 #ifdef CONFIG_MODEM_HAS_CRAPPY_BOOTLOADER
 
-	/* we do this as the BP bootloader from the SGS is a little bit
-	   crapy it does not send the magic data MODEM_MSG_SBL_DONE when
-	   it has finished loading. so we wait some amount of time */
+        /* we do this as the BP bootloader from the SGS is a little bit
+           crapy it does not send the magic data MODEM_MSG_SBL_DONE when
+           it has finished loading. so we wait some amount of time */
 
-	pr_info("[MODEM] we have a crappy bootloader an wait for it");
+        pr_info("[MODEM] we have a crappy bootloader an wait for it");
 
-	//waiting 1500 ms should be enough, maybe we can decrease this but unsure
+        //waiting 1500 ms should be enough, maybe we can decrease this but unsure
 	msleep(1500);
 
 #else
+
 	if (!mc->is_cdma_modem &&
 			readl(mc->mmio + OFF_MBOX_BP) != MODEM_MSG_SBL_DONE) {
 		pr_err("[MODEM] bootloader not ready\n");
 		return -EIO;
 	}
 #endif
+
+	if (mmio_sem(mc) != 1) {
+		pr_err("[MODEM] we do not own the semaphore\n");
+		return -EIO;
+	}
 
 	writel(0, mc->mmio + OFF_SEM);
 	if (ramdump) {
@@ -890,7 +896,6 @@ static long modemctl_ioctl(struct file *filp,
 
 static const struct file_operations modemctl_fops = {
 	.owner =		THIS_MODULE,
-	.llseek =		default_llseek,
 	.open =			modemctl_open,
 	.release =		modemctl_release,
 	.read =			modemctl_read,
@@ -1109,10 +1114,6 @@ static int __devinit modemctl_probe(struct platform_device *pdev)
 	mc->gpio_cp_reset = pdata->gpio_cp_reset;
 	mc->gpio_phone_on = pdata->gpio_phone_on;
 	mc->is_cdma_modem = pdata->is_cdma_modem;
-	if (pdata->num_pdp_contexts)
-		mc->num_pdp_contexts = pdata->num_pdp_contexts;
-	else
-		mc->num_pdp_contexts = 1;
 
 	res = platform_get_resource(pdev, IORESOURCE_MEM, 0);
 	if (!res)
