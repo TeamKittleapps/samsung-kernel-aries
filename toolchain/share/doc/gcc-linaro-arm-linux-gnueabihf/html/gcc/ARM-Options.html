@@ -350,7 +350,11 @@ defined.
 
      <br><dt><code>-mneon-for-64bits</code><dd><a name="index-mneon_002dfor_002d64bits-1149"></a>Enables using Neon to handle scalar 64-bits operations. This is
 disabled by default since the cost of moving data from core registers
-to Neon is high. 
+to Neon is high.
+
+     <br><dt><code>-mrestrict-it</code><dd><a name="index-mrestrict_002dit-1150"></a>Restricts generation of IT blocks to conform to the rules of ARMv8. 
+IT blocks can only contain a single 16-bit instruction from a select
+set of instructions. This option is on by default for ARMv8 Thumb mode. 
 </dl>
 
  </body></html>

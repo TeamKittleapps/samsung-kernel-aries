@@ -62,9 +62,8 @@
 #define PTRACE_O_TRACEEXEC	0x00000010
 #define PTRACE_O_TRACEVFORKDONE	0x00000020
 #define PTRACE_O_TRACEEXIT	0x00000040
-#define PTRACE_O_TRACESECCOMP	0x00000080
 
-#define PTRACE_O_MASK		0x000000ff
+#define PTRACE_O_MASK		0x0000007f
 
 /* Wait extended result codes for the above trace options.  */
 #define PTRACE_EVENT_FORK	1
@@ -74,7 +73,6 @@
 #define PTRACE_EVENT_VFORK_DONE	5
 #define PTRACE_EVENT_EXIT	6
 #define PTRACE_EVENT_STOP	7
-#define PTRACE_EVENT_SECCOMP	8
 
 #include <asm/ptrace.h>
 

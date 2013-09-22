@@ -1,5 +1,5 @@
 This is doc/cpp.info, produced by makeinfo version 4.13 from
-/cbuild/slaves/oorts/crosstool-ng/builds/arm-linux-gnueabihf-linux/.build/src/gcc-linaro-4.8-2013.05/gcc/doc/cpp.texi.
+/cbuild/slaves/oorts/crosstool-ng/builds/arm-linux-gnueabihf-linux/.build/src/gcc-linaro-4.8-2013.08/gcc/doc/cpp.texi.
 
 Copyright (C) 1987-2013 Free Software Foundation, Inc.
 
@@ -1734,11 +1734,10 @@ with `__FILE__' and `__LINE__', though.
      This macro is defined when the C++ compiler is in use.  You can use
      `__cplusplus' to test whether a header is compiled by a C compiler
      or a C++ compiler.  This macro is similar to `__STDC_VERSION__', in
-     that it expands to a version number.  A fully conforming
-     implementation of the 1998 C++ standard will define this macro to
-     `199711L'.  The GNU C++ compiler is not yet fully conforming, so
-     it uses `1' instead.  It is hoped to complete the implementation
-     of standard C++ in the near future.
+     that it expands to a version number.  Depending on the language
+     standard selected, the value of the macro is `199711L', as
+     mandated by the 1998 C++ standard, or `201103L', per the 2011 C++
+     standard.
 
 `__OBJC__'
      This macro is defined, with value 1, when the Objective-C compiler
@@ -5546,52 +5545,52 @@ Node: Concatenation58084
 Node: Variadic Macros61192
 Node: Predefined Macros65979
 Node: Standard Predefined Macros66567
-Node: Common Predefined Macros72504
-Node: System-specific Predefined Macros90127
-Node: C++ Named Operators92150
-Node: Undefining and Redefining Macros93114
-Node: Directives Within Macro Arguments95218
-Node: Macro Pitfalls96766
-Node: Misnesting97299
-Node: Operator Precedence Problems98411
-Node: Swallowing the Semicolon100277
-Node: Duplication of Side Effects102300
-Node: Self-Referential Macros104483
-Node: Argument Prescan106892
-Node: Newlines in Arguments110646
-Node: Conditionals111597
-Node: Conditional Uses113427
-Node: Conditional Syntax114785
-Node: Ifdef115105
-Node: If118266
-Node: Defined120570
-Node: Else121853
-Node: Elif122423
-Node: Deleted Code123712
-Node: Diagnostics124959
-Node: Line Control126506
-Node: Pragmas130310
-Node: Other Directives135066
-Node: Preprocessor Output136116
-Node: Traditional Mode139317
-Node: Traditional lexical analysis140375
-Node: Traditional macros142878
-Node: Traditional miscellany146680
-Node: Traditional warnings147677
-Node: Implementation Details149874
-Node: Implementation-defined behavior150495
-Ref: Identifier characters151247
-Node: Implementation limits154325
-Node: Obsolete Features156999
-Node: Differences from previous versions159887
-Node: Invocation164095
-Ref: Wtrigraphs168547
-Ref: dashMF173322
-Ref: fdollars-in-identifiers183053
-Node: Environment Variables192922
-Node: GNU Free Documentation License195888
-Node: Index of Directives221052
-Node: Option Index223132
-Node: Concept Index229535
+Node: Common Predefined Macros72409
+Node: System-specific Predefined Macros90032
+Node: C++ Named Operators92055
+Node: Undefining and Redefining Macros93019
+Node: Directives Within Macro Arguments95123
+Node: Macro Pitfalls96671
+Node: Misnesting97204
+Node: Operator Precedence Problems98316
+Node: Swallowing the Semicolon100182
+Node: Duplication of Side Effects102205
+Node: Self-Referential Macros104388
+Node: Argument Prescan106797
+Node: Newlines in Arguments110551
+Node: Conditionals111502
+Node: Conditional Uses113332
+Node: Conditional Syntax114690
+Node: Ifdef115010
+Node: If118171
+Node: Defined120475
+Node: Else121758
+Node: Elif122328
+Node: Deleted Code123617
+Node: Diagnostics124864
+Node: Line Control126411
+Node: Pragmas130215
+Node: Other Directives134971
+Node: Preprocessor Output136021
+Node: Traditional Mode139222
+Node: Traditional lexical analysis140280
+Node: Traditional macros142783
+Node: Traditional miscellany146585
+Node: Traditional warnings147582
+Node: Implementation Details149779
+Node: Implementation-defined behavior150400
+Ref: Identifier characters151152
+Node: Implementation limits154230
+Node: Obsolete Features156904
+Node: Differences from previous versions159792
+Node: Invocation164000
+Ref: Wtrigraphs168452
+Ref: dashMF173227
+Ref: fdollars-in-identifiers182958
+Node: Environment Variables192827
+Node: GNU Free Documentation License195793
+Node: Index of Directives220957
+Node: Option Index223037
+Node: Concept Index229440
 
 End Tag Table

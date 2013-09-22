@@ -58,7 +58,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="C_002b_002b-Extensions.html#C_002b_002b
 <p>Some attributes only make sense for C++ programs.
 
      <dl>
-<dt><code>abi_tag ("</code><var>tag</var><code>", ...)</code><dd><a name="index-g_t_0040code_007babi_005ftag_007d-attribute-3511"></a>The <code>abi_tag</code> attribute can be applied to a function or class
+<dt><code>abi_tag ("</code><var>tag</var><code>", ...)</code><dd><a name="index-g_t_0040code_007babi_005ftag_007d-attribute-3524"></a>The <code>abi_tag</code> attribute can be applied to a function or class
 declaration.  It modifies the mangled name of the function or class to
 incorporate the tag name, in order to distinguish the function or
 class from an earlier version with a different ABI; perhaps the class
@@ -77,7 +77,7 @@ not have all the ABI tags used by its subobjects and virtual functions; for user
 that needs to coexist with an earlier ABI, using this option can help
 to find all affected types that need to be tagged.
 
-     <br><dt><code>init_priority (</code><var>priority</var><code>)</code><dd><a name="index-g_t_0040code_007binit_005fpriority_007d-attribute-3512"></a>
+     <br><dt><code>init_priority (</code><var>priority</var><code>)</code><dd><a name="index-g_t_0040code_007binit_005fpriority_007d-attribute-3525"></a>
 
      <p>In Standard C++, objects defined at namespace scope are guaranteed to be
 initialized in an order in strict accordance with that of their definitions
@@ -97,7 +97,7 @@ inclusive.  Lower numbers indicate a higher priority.
      <p class="noindent">Note that the particular values of <var>priority</var> do not matter; only their
 relative ordering.
 
-     <br><dt><code>java_interface</code><dd><a name="index-g_t_0040code_007bjava_005finterface_007d-attribute-3513"></a>
+     <br><dt><code>java_interface</code><dd><a name="index-g_t_0040code_007bjava_005finterface_007d-attribute-3526"></a>
 This type attribute informs C++ that the class is a Java interface.  It may
 only be applied to classes declared within an <code>extern "Java"</code> block. 
 Calls to methods declared in this interface are dispatched using GCJ's

@@ -33,7 +33,7 @@
 #ifndef __RADEON_DRM_H__
 #define __RADEON_DRM_H__
 
-#include <drm/drm.h>
+#include "drm.h"
 
 /* WARNING: If you change any of these defines, make sure to change the
  * defines in the X server file (radeon_sarea.h)
@@ -874,10 +874,6 @@ struct drm_radeon_gem_pwrite {
 
 #define RADEON_CHUNK_ID_RELOCS	0x01
 #define RADEON_CHUNK_ID_IB	0x02
-#define RADEON_CHUNK_ID_FLAGS	0x03
-
-/* The first dword of RADEON_CHUNK_ID_FLAGS is a uint32 of these flags: */
-#define RADEON_CS_KEEP_TILING_FLAGS 0x01
 
 struct drm_radeon_cs_chunk {
 	uint32_t		chunk_id;

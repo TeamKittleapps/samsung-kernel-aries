@@ -6,7 +6,7 @@
 <meta name="generator" content="makeinfo 4.13">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Target-Builtins.html#Target-Builtins" title="Target Builtins">
-<link rel="prev" href="RX-Built_002din-Functions.html#RX-Built_002din-Functions" title="RX Built-in Functions">
+<link rel="prev" href="S_002f390-System-z-Built_002din-Functions.html#S_002f390-System-z-Built_002din-Functions" title="S/390 System z Built-in Functions">
 <link rel="next" href="SPARC-VIS-Built_002din-Functions.html#SPARC-VIS-Built_002din-Functions" title="SPARC VIS Built-in Functions">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
@@ -48,18 +48,18 @@ Texts being (a) (see below), and with the Back-Cover Texts being (b)
 <a name="SH-Built_002din-Functions"></a>
 <p>
 Next:&nbsp;<a rel="next" accesskey="n" href="SPARC-VIS-Built_002din-Functions.html#SPARC-VIS-Built_002din-Functions">SPARC VIS Built-in Functions</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="RX-Built_002din-Functions.html#RX-Built_002din-Functions">RX Built-in Functions</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="S_002f390-System-z-Built_002din-Functions.html#S_002f390-System-z-Built_002din-Functions">S/390 System z Built-in Functions</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="Target-Builtins.html#Target-Builtins">Target Builtins</a>
 <hr>
 </div>
 
-<h4 class="subsection">6.56.17 SH Built-in Functions</h4>
+<h4 class="subsection">6.56.18 SH Built-in Functions</h4>
 
 <p>The following built-in functions are supported on the SH1, SH2, SH3 and SH4
 families of processors:
 
 <div class="defun">
-&mdash; Built-in Function: void <b>__builtin_set_thread_pointer</b> (<var>void *ptr</var>)<var><a name="index-g_t_005f_005fbuiltin_005fset_005fthread_005fpointer-3436"></a></var><br>
+&mdash; Built-in Function: void <b>__builtin_set_thread_pointer</b> (<var>void *ptr</var>)<var><a name="index-g_t_005f_005fbuiltin_005fset_005fthread_005fpointer-3449"></a></var><br>
 <blockquote><p>Sets the &lsquo;<samp><span class="samp">GBR</span></samp>&rsquo; register to the specified value <var>ptr</var>.  This is usually
 used by system code that manages threads and execution contexts.  The compiler
 normally does not generate code that modifies the contents of &lsquo;<samp><span class="samp">GBR</span></samp>&rsquo; and
@@ -70,7 +70,7 @@ value in user code must be done with caution, since the compiler might use
       </blockquote></div>
 
 <div class="defun">
-&mdash; Built-in Function: void * <b>__builtin_thread_pointer</b> (<var>void</var>)<var><a name="index-g_t_005f_005fbuiltin_005fthread_005fpointer-3437"></a></var><br>
+&mdash; Built-in Function: void * <b>__builtin_thread_pointer</b> (<var>void</var>)<var><a name="index-g_t_005f_005fbuiltin_005fthread_005fpointer-3450"></a></var><br>
 <blockquote><p>Returns the value that is currently set in the &lsquo;<samp><span class="samp">GBR</span></samp>&rsquo; register. 
 Memory loads and stores that use the thread pointer as a base address are
 turned into &lsquo;<samp><span class="samp">GBR</span></samp>&rsquo; based displacement loads and stores, if possible. 

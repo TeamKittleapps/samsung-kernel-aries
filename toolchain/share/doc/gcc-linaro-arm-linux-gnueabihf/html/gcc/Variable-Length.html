@@ -54,7 +54,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="C-Extensions.html#C-Extensions">C Exten
 
 <h3 class="section">6.19 Arrays of Variable Length</h3>
 
-<p><a name="index-variable_002dlength-arrays-2521"></a><a name="index-arrays-of-variable-length-2522"></a><a name="index-VLAs-2523"></a>
+<p><a name="index-variable_002dlength-arrays-2522"></a><a name="index-arrays-of-variable-length-2523"></a><a name="index-VLAs-2524"></a>
 Variable-length automatic arrays are allowed in ISO C99, and as an
 extension GCC accepts them in C90 mode and in C++.  These arrays are
 declared like any other automatic arrays, but with a length that is not
@@ -72,11 +72,11 @@ example:
        return fopen (str, mode);
      }
 </pre>
- <p><a name="index-scope-of-a-variable-length-array-2524"></a><a name="index-variable_002dlength-array-scope-2525"></a><a name="index-deallocating-variable-length-arrays-2526"></a>Jumping or breaking out of the scope of the array name deallocates the
+ <p><a name="index-scope-of-a-variable-length-array-2525"></a><a name="index-variable_002dlength-array-scope-2526"></a><a name="index-deallocating-variable-length-arrays-2527"></a>Jumping or breaking out of the scope of the array name deallocates the
 storage.  Jumping into the scope is not allowed; you get an error
 message for it.
 
- <p><a name="index-g_t_0040code_007balloca_007d-vs-variable_002dlength-arrays-2527"></a>You can use the function <code>alloca</code> to get an effect much like
+ <p><a name="index-g_t_0040code_007balloca_007d-vs-variable_002dlength-arrays-2528"></a>You can use the function <code>alloca</code> to get an effect much like
 variable-length arrays.  The function <code>alloca</code> is available in
 many other C implementations (but not in all).  On the other hand,
 variable-length arrays are more elegant.
@@ -109,7 +109,7 @@ use a forward declaration in the parameter list&mdash;another GNU extension.
        /* <span class="roman">...</span> */
      }
 </pre>
- <p><a name="index-parameter-forward-declaration-2528"></a>The &lsquo;<samp><span class="samp">int len</span></samp>&rsquo; before the semicolon is a <dfn>parameter forward
+ <p><a name="index-parameter-forward-declaration-2529"></a>The &lsquo;<samp><span class="samp">int len</span></samp>&rsquo; before the semicolon is a <dfn>parameter forward
 declaration</dfn>, and it serves the purpose of making the name <code>len</code>
 known when the declaration of <code>data</code> is parsed.
 

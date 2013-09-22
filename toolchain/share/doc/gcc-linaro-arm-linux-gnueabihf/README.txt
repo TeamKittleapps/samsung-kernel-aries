@@ -1,4 +1,4 @@
-Linaro Toolchain 2013.05
+Linaro Toolchain 2013.08
 ========================
 
 This package contains pre-built versions of Linaro GCC and Linaro GDB
@@ -19,7 +19,7 @@ easier.
 
 What's included
 ---------------
- * Linaro GCC 4.8 2013.05
+ * Linaro GCC 4.8 2013.08
  * Linaro GDB 7.6 2013.05
  * A statically linked gdbserver in arm-linux-gnueabihf/debug-root
  * A system root
@@ -51,20 +51,27 @@ The default configuration is:
  * 'hard float' calling convention
  * Uses the VFPv3-D16 FPU
  * Multiarch and multilib enabled
- * EGLIBC 2.15
- * A GCC 4.7 series libgcc and libstdc++
+ * EGLIBC 2.17
+ * A GCC 4.8 series libgcc and libstdc++
 
 For more information on the LEB, see the Linaro Wiki at
 https://wiki.linaro.org/
 
 Precise comes with a 4.6 based runtime.  To use all of the features of
-Linaro GCC 4.7, and especially if you get runtime errors about a
-missing 'GCC_4.7.0 version', please download the runtime package from:
+Linaro GCC 4.8, and especially if you get runtime errors about a
+missing 'GCC_4.8.X version', please download the runtime package from:
 
  https://launchpad.net/linaro-toolchain-binaries/+download
 
-and extract on the target.  Future LEB images will include the 4.7
+and extract on the target.  Future LEB images will include the 4.8
 runtime by default.
+
+To use all of the features of Linaro eglibc, and especially if you get runtime
+errots about libc version, please get the sysroot from the release tarball.
+
+unzip a release tarball.
+The sysroot is gcc-linaro-../arm-linux-gnueabihf/libc
+
 
 In addition to the default configuration, a basic ARMv4T runtime is
 included for use when building baremetal projects such as Linux and
